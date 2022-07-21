@@ -12,4 +12,5 @@ def create_app(test_config=None):
     #register routes
     app.register_blueprint(home)  
 
+
     return app
