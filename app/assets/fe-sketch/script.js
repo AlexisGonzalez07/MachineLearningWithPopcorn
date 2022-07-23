@@ -40,3 +40,10 @@ const fetchPosters = async () => {
 }
 
 // window.onload = fetchPosters
+
+// const tab = (e) => {
+//   console.log(e.target.href)
+//   document.location.replace(e.target.href)
+// }
+
+// document.addEventListener('click', tab)

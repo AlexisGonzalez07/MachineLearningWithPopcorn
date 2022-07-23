@@ -1,13 +1,21 @@
-<div>
-  <ul class="nav justify-content-center">
+<div class="tabs">
+  <ul class="nav nav-pills justify-content-center">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="/graph">General</a>
+      <a
+        class="nav-link active"
+        aria-current="page"
+        href="/rating"
+        data-bs-toggle="tab"
+      >
+        By Rating
+      </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">By Actor</a>
+      <a class="nav-link" href="/actor" data-bs-toggle="tab">By Actor</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">By Year</a>
+      <a class="nav-link" href="/year" data-bs-toggle="tab">By Year</a>
     </li>
   </ul>
 </div>
+<script src="tabs.js"></script>

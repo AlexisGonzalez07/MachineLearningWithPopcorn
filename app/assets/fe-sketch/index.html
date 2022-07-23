@@ -130,20 +130,48 @@
       <!-- carousel end -->
 
       <!-- graphs page start -->
-      <div>
-        <ul class="nav justify-content-center">
+      <div class="tabs">
+        <ul class="nav nav-pills justify-content-center" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/graph">
-              General
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/rating"
+              data-bs-toggle="tab"
+            >
+              By Rating
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">By Actor</a>
+            <a class="nav-link" href="/actor" data-bs-toggle="tab">By Actor</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">By Year</a>
+            <a class="nav-link" href="/year" data-bs-toggle="tab">By Year</a>
           </li>
         </ul>
+      </div>
+
+      <!-- <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul> -->
+
+      <div class="container-fluid justify-content-center">
+        <img
+          src="https://image.shutterstock.com/image-vector/simple-infographic-line-chart-sky-600w-534979027.jpg"
+          alt=""
+          class="d-block img-fluid mx-auto w-100"
+        />
       </div>
 
       <!-- graph page end -->

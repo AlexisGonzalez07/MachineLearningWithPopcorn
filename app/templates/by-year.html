@@ -1,0 +1,37 @@
+{% extends "layout/main.html" %} {% block body %} {% include
+"partials/analytics-tabs.html" %}
+<!-- 
+<canvas id="myChart" height="600" width="400"></canvas>
+
+<script>
+  const ctx = document.getElementById('myChart')
+
+  const data = {
+    labels: {{labels | safe}},
+    datasets: [
+      {
+        label: 'My First dataset',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: {{values | safe}},
+      },
+    ],
+  }
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {responsive: false},
+  }
+
+  const myChart = new Chart(ctx, config)
+</script> -->
+
+<div class="container-fluid justify-content-center">
+  <img
+    src="https://image.shutterstock.com/image-vector/simple-infographic-line-chart-sky-600w-534979027.jpg"
+    alt=""
+    class="d-block img-fluid mx-auto w-100"
+  />
+</div>
+{% endblock %}
