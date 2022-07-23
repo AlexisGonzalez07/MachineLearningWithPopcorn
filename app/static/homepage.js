@@ -39,4 +39,4 @@ const fetchPosters = async () => {
   res.forEach((item) => imdb(item))
 }
 
-// window.onload = fetchPosters
+window.onload = fetchPosters

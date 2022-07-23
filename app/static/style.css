@@ -1,3 +1,31 @@
 body {
   padding-top: 50px;
 }
+
+main {
+}
+
+.hero {
+  background-image: url('https://media.istockphoto.com/photos/working-movie-projector-for-viewing-amateur-films-picture-id1308238702?k=20&m=1308238702&s=612x612&w=0&h=FN1_iQXVlcOz-nHN6FMj7pyWBMHlMqr6K3LDQ4cmrEU=');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* min-height: 70vh; */
+  height: 100vh;
+  justify-content: center;
+}
+
+#carouselExampleIndicators {
+  width: 50%;
+  height: 90vh;
+}
+
+/* .carousel-item {
+  width: 100%;
+  height: 900px;
+} */
+
+.carousel-item img {
+  width: auto;
+  height: 900px;
+}
