@@ -3,10 +3,9 @@ import io
 import random
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
+
+
 bp = Blueprint('home', __name__, url_prefix='/')
-
-
-
 
 
 @bp.route('/')
@@ -63,21 +62,8 @@ def rating():
 
 @bp.route('/actor')
 def actor():
-    data = [
-        ('name1',2003),
-        ('name2',2004),
-        ('name3',2005),
-        ('name4',2006),
-        ('name5',2007),
-        ('name6',2008)
-    ]
-
-    labels = [row[0] for row in data]  
-    values = [row[1] for row in data]
-
-    return render_template('by-actor.html',
-                          labels=labels,
-                          values=values)
+    return render_template('by-actor.html')
+    
 
 @bp.route('/year')
 def year():

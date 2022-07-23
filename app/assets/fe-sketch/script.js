@@ -47,3 +47,12 @@ const fetchPosters = async () => {
 // }
 
 // document.addEventListener('click', tab)
+// ================================================
+
+function searchHandler(e) {
+  e.preventDefault()
+  const search = document.querySelector('input').value.trim()
+  console.log(search)
+  document.querySelector('input').value = ''
+}
+document.querySelector('#search').addEventListener('submit', searchHandler)

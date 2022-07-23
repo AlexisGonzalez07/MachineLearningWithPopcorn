@@ -2,9 +2,6 @@ body {
   padding-top: 50px;
 }
 
-main {
-}
-
 .hero {
   background-image: url('https://img.freepik.com/free-vector/film-strip-with-light-effect-cinema-background_1017-38171.jpg');
   background-position: center;
@@ -16,16 +13,12 @@ main {
 }
 
 .nav-pills {
+  padding-top: 20px;
   font-size: x-large;
 }
 
-.nav-pills .nav-link.active {
-  background-color: transparent;
-  color: #0d6efd;
-}
-
 .nav-link {
-  color: skyblue;
+  color: rgb(35, 130, 168);
 }
 
 .nav-link:hover {
