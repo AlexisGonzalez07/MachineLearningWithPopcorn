@@ -4,6 +4,10 @@ from home import df5000movies
 from home import df5000credits
 pd.set_option('display.float_format', lambda x: '%.3f' % x)
 
+def cleanCreditsData(data):
+    data = data.dropna(subset=(["star_one"]))
+    data = data.dropna(subset=(["star_two"]))
+    return data
 
 def dropColumn(data, col):
     data = data.drop(columns=[col])
@@ -43,7 +47,8 @@ def populateStars(data,col):
                 if i == 1:
                     data.at[j, "star_two"] = name
         except: 
-            print("No actors")    
+            # print("No actors") 
+            continue   
     return data
 
 #convert genre names in json object to columns
@@ -72,8 +77,16 @@ def updateCredits(data):
     data = dropColumn(data, 'cast')
     data = makeStarCol(data)
     data = populateStars(data, 'json_cast')
+    data = dropColumn(data, 'json_cast')
+    data = cleanCreditsData(data)
     return data
 
-df5000credits.head()
-df5000credits = updateCredits(df5000credits)
-df5000credits.head()
+
+def main5000(movie_data,credits_data):
+    movie_data = updateMovies(movie_data)
+    credits_data = updateCredits(credits_data)
+    data = pd.merge(movie_data, credits_data, left_on="id", right_on="movie_id")
+    return data
+
+data_5000 = main5000(df5000movies, df5000credits)
+data_5000.describe()
