@@ -107,6 +107,10 @@ def rating():
 @bp.route('/actor')
 def actor():
     return render_template('by-actor.html')
+
+@bp.route('/actor/<name>')
+def actor_search(name):
+    return render_template('actor-search.html',name=name)
     
 
 
