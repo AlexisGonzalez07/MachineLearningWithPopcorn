@@ -1,4 +1,4 @@
-from home import df6820movies as df
+# from home import df6820movies as df
 import string
 import pandas as pd
 from datetime import datetime
@@ -57,4 +57,4 @@ def main6820(data):
     data = addMonthInt(addRatingNum(addKidFriendly(cleanData(data))))
     return data
     
-print(main6820(df))
+# main6820(df)
