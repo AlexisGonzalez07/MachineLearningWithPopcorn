@@ -1,11 +1,17 @@
 {% extends "layout/main.html" %} {% block body %} {% include
 "partials/analytics-tabs.html" %}
 
-<div class="container-fluid justify-content-center" style="height: 90vh;">
+<div class="container-fluid justify-content-center row" style="height: 90vh;">
   <img
-    src="/plot.png"
+    src="/plot-pg-score.png"
     alt=""
-    class="d-block img-fluid mx-auto"
+    class="d-block img mx-auto col"
+    style="height: 80%; width: auto;"
+  />
+  <img
+    src="/plot-r-score.png"
+    alt=""
+    class="d-block img mx-auto col"
     style="height: 80%; width: auto;"
   />
 </div>
