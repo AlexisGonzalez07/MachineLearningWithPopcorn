@@ -40,10 +40,7 @@ $ .venv\Scripts\activate
 ```
 Install dependencies:
 ```
-$ pip install numpy
-$ pip install pandas
-$ pip intall datetime
-$ pip intall matplotlib
+$ pip install flask, pandas, matplotlib, datetime
 ```
 Start server at http://localhost:5000/:
 ```
@@ -63,10 +60,10 @@ SO that I can show off my knowledge of movie trends or learn more about my favor
 ```
 
 # Contributors:
-Alexis Gonzalez: https://github.com/AlexisGonzalez07 and https://www.linkedin.com/in/alexis-gonzalez-07/
-Devon Gulley: https://github.com/devongulley1602 and https://www.linkedin.com/in/devon-gulley/
-James D'Imperio: https://github.com/jgd78 and https://www.linkedin.com/in/james-dimperio/
-Talon Logan: https://github.com/aologan and https://www.linkedin.com/in/talon-logan-b3bba4231/
+Alexis Gonzalez: https://github.com/AlexisGonzalez07 and https://www.linkedin.com/in/alexis-gonzalez-07/ <br>
+Devon Gulley: https://github.com/devongulley1602 and https://www.linkedin.com/in/devon-gulley/ <br>
+James D'Imperio: https://github.com/jgd78 and https://www.linkedin.com/in/james-dimperio/ <br>
+Talon Logan: https://github.com/aologan and https://www.linkedin.com/in/talon-logan-b3bba4231/ <br>
 Victor Lupasco: https://github.com/vitokwolf and https://www.linkedin.com/in/victor-lupascu-823650209/
 
 
