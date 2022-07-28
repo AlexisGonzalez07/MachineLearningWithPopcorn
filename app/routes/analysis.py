@@ -6,9 +6,11 @@ from matplotlib.figure import Figure
 from flask import Response,Blueprint, render_template
 
 # import datasets
-from home import df6820movies as df
-from home import df5000movies
-from home import df5000credits
+# from home import df6820movies as df
+# from home import df5000movies
+# from home import df5000credits
+from app.utils.home import df6820movies,df5000credits,df5000movies
+
 # import util functions
 from app.utils._6820processing import main6820
 
@@ -28,7 +30,7 @@ def create_score_pg_figure():
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1)
 
-    df1 = main6820(df)
+    df1 = main6820(df6820movies)
     pg_df = df1[df1['for_kids']==1]    
     # print(pg_df)
     xs = df1['year'].unique()
@@ -59,7 +61,7 @@ def create_score_r_figure():
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1)
 
-    df1 = main6820(df)
+    df1 = main6820(df6820movies)
     r_df = df1[df1['for_kids']==0]    
     xs = df1['year'].unique()
 

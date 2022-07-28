@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 import sys
 from app.utils._6820processing import main6820
-from home import df6820movies as df
+from app.utils.home import df6820movies as df
 
 
 
