@@ -3,9 +3,9 @@ Data Analysis project of raw movie data from the internet.
 
 ##  Data Analysis and Visualization Project
 
-URL: Not yet launched. 
+URL: https://cinemanalysis.herokuapp.com. 
 Version 1.0  
-Deployment Date: TBD 
+Deployment Date: 7/28/2022 
 
 Add the link to the file below:
 ![Team Profile Demo](./assets/Cinemanalysis.gif)
