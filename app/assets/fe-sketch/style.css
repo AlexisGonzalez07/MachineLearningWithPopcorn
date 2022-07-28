@@ -1,0 +1,43 @@
+body {
+  padding-top: 50px;
+}
+
+main {
+}
+
+.hero {
+  background-image: url('https://img.freepik.com/free-vector/film-strip-with-light-effect-cinema-background_1017-38171.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* min-height: 70vh; */
+  height: 100vh;
+  justify-content: center;
+}
+
+.nav-pills {
+  font-size: x-large;
+}
+
+.nav-pills .nav-link.active {
+  background-color: transparent;
+  color: #0d6efd;
+}
+
+.nav-link {
+  color: skyblue;
+}
+
+.nav-link:hover {
+  background-color: rgb(166, 182, 197);
+}
+
+#carouselExampleIndicators {
+  width: 50%;
+  height: 90vh;
+}
+
+.carousel-item img {
+  width: auto;
+  height: 900px;
+}

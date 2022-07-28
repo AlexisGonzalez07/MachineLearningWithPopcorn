@@ -1,0 +1,4 @@
+flask
+pandas
+datetime
+matplotlib

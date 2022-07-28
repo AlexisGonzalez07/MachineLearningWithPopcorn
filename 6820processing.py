@@ -58,3 +58,6 @@ def main6820(data):
     return data
     
 main6820(df)
+
+ls = list(df.columns.values)
+print(ls)
