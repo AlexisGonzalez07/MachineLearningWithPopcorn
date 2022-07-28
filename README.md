@@ -1,4 +1,4 @@
-# MachineLearningWithPopcorn
+# Cinemanalysis - Popcorn Not Included
 Data Analysis project of raw movie data from the internet.
 
 ##  Data Analysis and Visualization Project
@@ -8,7 +8,7 @@ Version 1.0
 Deployment Date: TBD 
 
 Add the link to the file below:
-![Team Profile Demo]("/")
+![Team Profile Demo](./assets/Cinemanalysis.gif)
 
 ## Licenses
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
