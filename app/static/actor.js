@@ -1,7 +1,15 @@
+function titleCase(str) {
+  return str
+    .split(' ')
+    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ')
+}
+
 async function searchHandler(e) {
   e.preventDefault()
-  const search = document.querySelector('input').value.trim()
-  console.log(search)
+  const search = titleCase(document.querySelector('input').value.trim())
+  // console.log(search)
+
   if (search) {
     const res = await fetch(`/api/actor/${search}`, {
       method: 'post',
@@ -10,61 +18,42 @@ async function searchHandler(e) {
     })
     if (res.ok) {
       const r = await res.json()
-      console.log(r)
-
-      // let pieData = []
-      // let iteration = r[0].length
-      // let values = r.length
-      // for (let i = 0; i < iteration; i++) {
-      //   let item = { value: 0, label: '', color: '' }
-      //   for (let j = 0; j < values; j++) {
-      //     if (j === 0) {
-      //       item.value = r[j][i]
-      //     } else if (j === 1) {
-      //       item.genre = r[j][i]
-      //     } else {
-      //       item.color = r[j][i]
-      //     }
-      //   }
-      //   pieData.push(item)
-
+      // console.log(r)
       new Chart(document.getElementById('chart'), {
-        type: 'pie',
+        type: 'doughnut',
         data: {
           labels: r.labels,
           datasets: [
             {
-              label: 'Population (millions)',
+              label: 'Movies',
               backgroundColor: r.colors,
               data: r.values,
+              hoverOffset: 10,
             },
           ],
         },
         options: {
-          title: {
-            display: true,
-            text: `${search}'s Movie Genre  `,
+          responsive: false,
+          plugins: {
+            legend: {
+              position: 'bottom',
+            },
+            title: {
+              display: true,
+              text: `${search}'s Movies Ratio by Genre`,
+              fullSize: true,
+              padding: 25,
+              font: {
+                size: 20,
+              },
+            },
           },
         },
       })
-
-      // r.map(
-      //   (item) => {
-      //     console.log(item)
-      //   },
-      //   // pieData.push({
-      //   //   value: item.value,
-      //   //   label: label,
-      //   //   color: colors,
-      //   // }),
-      // )
-      // console.log(pieData)
-      // window.location.replace(`/actor/${search}`)
     } else {
       alert(res.status)
     }
   }
-  // window.location.replace(`/actor/${search}`)
   document.querySelector('input').value = ''
 }
 document.querySelector('form').addEventListener('submit', searchHandler)

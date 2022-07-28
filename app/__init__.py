@@ -1,6 +1,7 @@
 from flask import Flask
 from app.routes import home
 from app.routes import api
+from app.routes import analysis
 
 
 def create_app(test_config=None):
@@ -12,8 +13,10 @@ def create_app(test_config=None):
     )
 
     #register routes
-    app.register_blueprint(home) 
     app.register_blueprint(api)  
+    app.register_blueprint(home) 
+    app.register_blueprint(analysis) 
+
  
 
     return app
