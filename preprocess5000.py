@@ -29,7 +29,7 @@ def makeGenreCol(data,col):
             if name not in data:
                 data[name] = pd.Series([0 for x in range(len(data[col]))])
     return data
-                
+
 def makeStarCol(data):
     data['star_one'] = pd.Series([None for x in range(len(data))])
     data['star_two'] = pd.Series([None for x in range(len(data))])
@@ -46,9 +46,9 @@ def populateStars(data,col):
                     data.at[j, "star_one"] = name
                 if i == 1:
                     data.at[j, "star_two"] = name
-        except: 
-            # print("No actors") 
-            continue   
+        except:
+            # print("No actors")
+            continue
     return data
 
 #convert genre names in json object to columns
@@ -60,18 +60,18 @@ def populateGenreCol(data, col):
             name = str(jsonObj[i]['name']).lower()
             data.at[j, name] = 1
     return data
-          
+
 #homepage seems insignificant so I dropped it
 
 def updateMovies(data):
-    data = dropColumn(data, 'homepage')     
-    data = toJson(data, 'genres', 'json_genres') 
+    data = dropColumn(data, 'homepage')
+    data = toJson(data, 'genres', 'json_genres')
     data = dropColumn(data, 'genres')
     data = makeGenreCol(data, "json_genres")
-    data = populateGenreCol(data, "json_genres") 
+    data = populateGenreCol(data, "json_genres")
     return data
-    
-    
+
+
 def updateCredits(data):
     data = toJson(data, 'cast', 'json_cast')
     data = dropColumn(data, 'cast')
